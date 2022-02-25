@@ -1,0 +1,31 @@
+.section--padding {
+  padding-bottom: 0;
+}
+.section__title--features {
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  text-align: start;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}
+
+.features__icon-container {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

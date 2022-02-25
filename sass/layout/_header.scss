@@ -1,0 +1,109 @@
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+  .logo {
+    color: var(--first-text-color);
+  }
+}
+.container--header {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+.header__connect-wrap {
+  margin-left: auto;
+}
+/*.logo-link {
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  color: var(--accent-color);
+  text-decoration: none;
+  margin-right: 93px;
+}*/
+.site-nav__list,
+.site-nav__connect-list {
+  display: flex;
+}
+.site-nav__list,
+.site-nav__connect-list {
+  .site-nav__link {
+    color: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+.site-nav__connect-list {
+  .site-nav__link {
+    color: var(--secondary-text-color);
+  }
+  /*& a:hover,
+  & a:focus {
+    color: var(--accent-color);
+  }*/
+}
+.site-nav__list {
+  .site-nav__item {
+    margin-right: 50px;
+    & a:hover,
+    & a:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+.site-nav__list {
+  .site-nav__item:last-child {
+    margin-right: 0;
+  }
+}
+.site-nav__connect-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav__item--current {
+  color: var(--accent-color);
+  position: relative;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 0;
+    bottom: -32px;
+  }
+}
+
+.site-nav__connect-item {
+  color: var(--secondary-text-color);
+}
+.site-nav__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.site-nav__connect-item {
+  .site-nav__link {
+    display: flex;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  color: var(--secondary-text-color);
+  & a:hover,
+  & a:focus {
+    color: var(--accent-color);
+  }
+}

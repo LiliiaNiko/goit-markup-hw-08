@@ -1,0 +1,22 @@
+@import './utils/variables';
+@import './utils/hidden';
+
+@import './base/reset';
+@import './base/common';
+
+@import './components/container';
+@import './components/title';
+@import './components/modal';
+@import './components/section';
+
+@import './layout/header';
+@import './layout/logo';
+@import './layout/hero';
+@import './layout/features';
+@import './layout/about';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/portfolio';
+@import './layout/footer';
+@import './layout/socials';
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap);
