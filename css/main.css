@@ -491,30 +491,53 @@ body {
   color: var(--first-background-color);
   background-color: var(--second-background-color);
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   flex-grow: 1;
-  min-height: 600px;
-  max-width: 1600px;
+  min-height: 400px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .section--style {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section--style {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    min-height: 600px;
+  }
+}
+
 .section-hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: calc(60 / 44);
+  font-size: 26px;
+  line-height: calc(42 / 26);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
-  width: 696px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-hero__title {
+    font-size: 44px;
+    line-height: calc(60 / 44);
+    width: 696px;
+  }
 }
 
 .section-hero__button {
@@ -621,6 +644,12 @@ body {
   .features__item {
     width: calc(100% / 4 - 30px);
     margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .section--about-none {
+    display: none;
   }
 }
 
