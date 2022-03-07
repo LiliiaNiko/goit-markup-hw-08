@@ -58,7 +58,7 @@ body {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -100,6 +100,7 @@ body {
   position: fixed;
   top: 0;
   transition: opacity 250ms, visibility 250ms;
+  overflow-y: scroll;
 }
 
 .modal {
@@ -388,9 +389,23 @@ body {
   text-decoration: none;
   margin-right: 93px;
 }*/
-.site-nav__list,
-.site-nav__connect-list {
-  display: none;
+@media screen and (max-width: 767px) {
+  .site-nav__list,
+  .site-nav__connect-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav__connect-list {
+    display: flex;
+  }
 }
 
 .site-nav__list .site-nav__link,
@@ -408,6 +423,13 @@ body {
 .site-nav__connect-list .site-nav__link:hover,
 .site-nav__connect-list .site-nav__link:focus {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .site-nav__connect-list .site-nav__link {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
 }
 
 .site-nav__connect-list {
@@ -463,6 +485,13 @@ body {
   margin-right: 10px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .site-nav__icon {
+    width: 10px;
+    height: 14px;
+  }
+}
+
 .site-nav__connect-item {
   color: var(--secondary-text-color);
 }
@@ -487,6 +516,12 @@ body {
   border: none;
   background-color: transparent;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
 }
 
 .mob-menu {
@@ -569,8 +604,8 @@ body {
   color: var(--first-background-color);
   background-color: var(--second-background-color);
   text-align: center;
-  padding-top: 118px;
-  padding-bottom: 118px;
+  padding: 118px 0;
+  margin: 0 auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -578,7 +613,8 @@ body {
   flex-grow: 1;
   min-height: 400px;
   max-width: 480px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -604,7 +640,6 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
-  width: 360px;
   margin-left: auto;
   margin-right: auto;
 }

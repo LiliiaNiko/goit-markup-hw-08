@@ -28,8 +28,21 @@
 .site-nav__list,
 .site-nav__connect-list {
   //display: flex;
-  display: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
+.site-nav__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+.site-nav__connect-list {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
 .site-nav__list,
 .site-nav__connect-list {
   .site-nav__link {
@@ -43,6 +56,14 @@
     &:hover,
     &:focus {
       color: var(--accent-color);
+    }
+  }
+}
+.site-nav__connect-list {
+  .site-nav__link {
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
     }
   }
 }
@@ -94,6 +115,11 @@
 .site-nav__icon {
   fill: currentColor;
   margin-right: 10px;
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 .site-nav__connect-item {
@@ -119,6 +145,11 @@
   background-color: transparent;
   margin-top: 10px;
 }
+.menu-open-btn {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
 .mob-menu {
   position: absolute;
   z-index: 1;
@@ -130,6 +161,7 @@
   left: 0;
   padding-top: 10px;
   padding-bottom: 48px;
+
   .container {
     height: 100%;
     display: flex;
