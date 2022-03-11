@@ -370,6 +370,7 @@ body {
 .container--header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .site-nav {
@@ -456,8 +457,10 @@ body {
   margin-right: 0;
 }
 
-.site-nav__connect-item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .site-nav__connect-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .site-nav__item--current {
@@ -518,6 +521,16 @@ body {
   margin-top: 10px;
 }
 
+.menu-open-btn:hover, .menu-open-btn:focus,
+.menu-close-btn:hover,
+.menu-close-btn:focus {
+  color: var(--accent-color);
+}
+
+.menu-open-btn:hover, .menu-open-btn:focus {
+  color: var(--accent-color);
+}
+
 @media screen and (min-width: 768px) {
   .menu-open-btn {
     display: none;
@@ -533,11 +546,9 @@ body {
   overflow: auto;
   top: 0;
   left: 0;
-  padding-top: 10px;
-  padding-bottom: 48px;
 }
 
-.mob-menu .container {
+.mob-menu .mob-menu__container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -546,6 +557,14 @@ body {
 
 .mob-menu__item:not(:last-child) {
   margin-bottom: 36px;
+}
+
+.mob-menu__top {
+  padding: 21px 26px 0 40px;
+}
+
+.mob-menu__bottom {
+  padding: 0 83px 48px 40px;
 }
 
 .mob-menu__link {
@@ -557,6 +576,10 @@ body {
   text-decoration: none;
 }
 
+.mob-menu__link:hover, .mob-menu__link:focus {
+  color: var(--accent-color);
+}
+
 .mob-menu__tel {
   font-weight: 500;
   font-size: 34px;
@@ -564,7 +587,6 @@ body {
   letter-spacing: 0.02em;
   color: #2196f3;
   text-decoration: none;
-  margin-bottom: 32px;
 }
 
 .mob-menu__mail {
@@ -574,7 +596,10 @@ body {
   letter-spacing: 0.02em;
   color: #757575;
   text-decoration: none;
-  margin-bottom: 64px;
+}
+
+.mob-menu__connect-item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .mob-menu-soc__link {
@@ -586,9 +611,29 @@ body {
   text-decoration: none;
 }
 
-.mob-menu-soc {
+.mob-menu-soc__list {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.mob-menu-soc__item:not(:last-child) {
+  position: relative;
+}
+
+.mob-menu-soc__item:not(:last-child)::after {
+  content: '';
+  width: 22px;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
+.mob-menu-soc {
+  margin-top: 64px;
+  padding-right: 83px;
 }
 
 .logo-link {
@@ -606,7 +651,7 @@ body {
   text-align: center;
   padding: 118px 0;
   margin: 0 auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -617,9 +662,22 @@ body {
   margin-right: auto;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section--style {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-bg-mob-2x.jpg);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section--style {
     max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-bg-tab.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .section--style {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-bg-tab-2x.jpg);
   }
 }
 
@@ -629,6 +687,13 @@ body {
     padding-bottom: 200px;
     max-width: 1600px;
     min-height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-bg.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .section--style {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-bg-2x.jpg);
   }
 }
 
