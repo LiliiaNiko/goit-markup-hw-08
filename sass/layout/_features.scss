@@ -1,6 +1,6 @@
-.section--padding {
-  padding-bottom: 0;
-}
+//.section--padding {
+//padding-bottom: 0;
+//}
 .section__title--features {
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -20,8 +20,10 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -15px;
-    /*justify-content: space-between;*/
+    margin-left: -30px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: -30px;
   }
   @media screen and (min-width: 1200px) {
     margin-left: -30px;
@@ -35,28 +37,28 @@
 }
 
 .features__icon-container {
-  max-width: 450px;
+  //max-width: 450px;
   height: 120px;
   background-color: #f5f4fa;
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (min-width: 768px) {
-    width: 354px;
-  }
+  //@media screen and (min-width: 768px) {
+  //width: 354px;
+  //}
   @media screen and (min-width: 1200px) {
     width: 270px;
   }
 }
 .features__item {
-  margin-bottom: 30px;
-  &:last-child {
-    margin-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
-
   @media screen and (min-width: 768px) {
-    width: calc(100% / 2 - 15px);
-    margin-left: 15px;
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
   }
   @media screen and (min-width: 1200px) {
     width: calc(100% / 4 - 30px);

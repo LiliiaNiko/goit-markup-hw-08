@@ -1,9 +1,17 @@
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ececec;
   .logo {
     color: var(--first-text-color);
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 .container--header {
@@ -17,6 +25,9 @@
 }
 .header__connect-wrap {
   margin-left: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 /*.logo-link {
   font-family: Raleway;
@@ -62,7 +73,7 @@
 }
 .site-nav__connect-list {
   .site-nav__link {
-    @media screen and (min-width: 768px) and (max-width: 1200px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       font-size: 12px;
       line-height: calc(14 / 12);
     }
@@ -72,10 +83,6 @@
   .site-nav__link {
     color: var(--secondary-text-color);
   }
-  /*& a:hover,
-  & a:focus {
-    color: var(--accent-color);
-  }*/
 }
 .site-nav__list {
   .site-nav__item {
@@ -92,8 +99,10 @@
   }
 }
 .site-nav__connect-item:not(:last-child) {
+  margin-bottom: 10px;
   @media screen and (min-width: 1200px) {
     margin-right: 50px;
+    margin-bottom: 0;
   }
 }
 
@@ -118,8 +127,15 @@
 .site-nav__icon {
   fill: currentColor;
   margin-right: 10px;
-
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+}
+.site-nav__icon--mail {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 14px;
+    height: 10px;
+  }
+}
+.site-nav__icon--tel {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 10px;
     height: 14px;
   }
@@ -201,6 +217,9 @@
   &:focus {
     color: var(--accent-color);
   }
+}
+.mob-menu__link--current {
+  color: var(--accent-color);
 }
 .mob-menu__tel {
   font-weight: 500;
